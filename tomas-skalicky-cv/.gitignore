@@ -1,0 +1,25 @@
+#####
+# Compiled sources
+#####
+*.class
+bin/
+build/
+target/
+
+
+
+#####
+# Gradle generated files and folders
+#####
+.gradle/
+
+
+
+#####
+# Eclipse IDE files and folders
+#####
+.classpath
+.project
+.settings/
+.metadata/
+Servers/
