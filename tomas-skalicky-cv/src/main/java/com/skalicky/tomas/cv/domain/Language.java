@@ -1,5 +1,8 @@
 package com.skalicky.tomas.cv.domain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
@@ -28,5 +31,32 @@ public enum Language {
 
     public String getAbbreviation() {
         return abbreviation;
+    }
+
+    private static final Map<String, Language> ABBREVIATION_TO_TYPE = initializeAbbretiationToTypeMap();
+
+    private static Map<String, Language> initializeAbbretiationToTypeMap() {
+        Map<String, Language> abbreviationTypeMap = new HashMap<>();
+        for (Language type : values()) {
+            abbreviationTypeMap.put(type.getAbbreviation(), type);
+        }
+        return abbreviationTypeMap;
+    }
+
+    /**
+     * Time complexity O(1).
+     * 
+     * @param abbreviation
+     * @return {@link Language} which the {@code abbreviation} correspond to.
+     * @throws IllegalArgumentException
+     *             if the abbreviation doesn't correspond to any {@link Language}
+     */
+    public static Language getType(String abbreviation) {
+        if (ABBREVIATION_TO_TYPE.containsKey(abbreviation)) {
+            return ABBREVIATION_TO_TYPE.get(abbreviation);
+        } else {
+            throw new IllegalArgumentException("The abbreviation '" + abbreviation
+                    + "' doesn't correspond to any supported language");
+        }
     }
 }
