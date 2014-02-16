@@ -12,11 +12,11 @@ public class Study {
 
     @NotNull
     @Valid
-    private AbstractCVDate from;
+    private CVDate from;
 
     @NotNull
     @Valid
-    private AbstractCVDate to;
+    private CVDate to;
 
     @NotBlank
     private String schoolName;
@@ -30,19 +30,19 @@ public class Study {
 
     private String studyType;
 
-    public AbstractCVDate getFrom() {
+    public CVDate getFrom() {
         return from;
     }
 
-    public void setFrom(AbstractCVDate from) {
+    public void setFrom(CVDate from) {
         this.from = from;
     }
 
-    public AbstractCVDate getTo() {
+    public CVDate getTo() {
         return to;
     }
 
-    public void setTo(AbstractCVDate to) {
+    public void setTo(CVDate to) {
         this.to = to;
     }
 

@@ -14,11 +14,11 @@ public class ProfessionalExperience {
 
     @NotNull
     @Valid
-    private AbstractCVDate from;
+    private CVDate from;
 
     @NotNull
     @Valid
-    private AbstractCVDate to;
+    private CVDate to;
 
     private String projectName;
 
@@ -38,19 +38,19 @@ public class ProfessionalExperience {
 
     private String notes;
 
-    public AbstractCVDate getFrom() {
+    public CVDate getFrom() {
         return from;
     }
 
-    public void setFrom(AbstractCVDate from) {
+    public void setFrom(CVDate from) {
         this.from = from;
     }
 
-    public AbstractCVDate getTo() {
+    public CVDate getTo() {
         return to;
     }
 
-    public void setTo(AbstractCVDate to) {
+    public void setTo(CVDate to) {
         this.to = to;
     }
 

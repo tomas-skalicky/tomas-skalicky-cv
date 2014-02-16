@@ -14,11 +14,11 @@ public class AcademicWork {
 
     @NotNull
     @Valid
-    private AbstractCVDate started;
+    private CVDate started;
 
     @NotNull
     @Valid
-    private AbstractCVDate finished;
+    private CVDate finished;
 
     @NotBlank
     private String description;
@@ -29,19 +29,19 @@ public class AcademicWork {
     @Valid
     private WebSite webSite;
 
-    public AbstractCVDate getStarted() {
+    public CVDate getStarted() {
         return started;
     }
 
-    public void setStarted(AbstractCVDate started) {
+    public void setStarted(CVDate started) {
         this.started = started;
     }
 
-    public AbstractCVDate getFinished() {
+    public CVDate getFinished() {
         return finished;
     }
 
-    public void setFinished(AbstractCVDate finished) {
+    public void setFinished(CVDate finished) {
         this.finished = finished;
     }
 
