@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.skalicky.tomas.cv.validation.Postconditions;
 import com.skalicky.tomas.cv.validation.ValidatorFactory;
@@ -20,11 +18,7 @@ import com.skalicky.tomas.cv.validation.ValidatorFactory;
  * 
  * @author <a href="mailto:skalicky.tomas@gmail.com">Tomas Skalicky</a>
  */
-@Document(collection = "cv")
 public class CV {
-
-    @Id
-    private String id;
 
     @NotNull
     @Valid
@@ -66,14 +60,6 @@ public class CV {
      * Default constructor is necessary because of existing of the private "Builder" constructor.
      */
     public CV() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public Person getPerson() {
@@ -163,8 +149,6 @@ public class CV {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("CV [");
-        builder.append(id);
-        builder.append(", ");
         builder.append(person);
         builder.append(", ");
         builder.append(localization);
@@ -189,7 +173,6 @@ public class CV {
     }
 
     private CV(Builder builder) {
-        id = builder.id;
         person = builder.person;
         localization = builder.localization;
         summary = builder.summary;
@@ -204,7 +187,6 @@ public class CV {
 
     public static class Builder {
 
-        private String id;
         private Person person;
         private Language localization;
         private String summary;
@@ -215,11 +197,6 @@ public class CV {
         private List<LanguageSkill> languageSkills = new ArrayList<>();
         private Map<String, List<String>> otherSkillsAndKnowledge = new HashMap<>();
         private List<String> interests = new ArrayList<>();
-
-        public Builder withId(String id) {
-            this.id = id;
-            return this;
-        }
 
         public Builder withPerson(Person person) {
             this.person = person;
