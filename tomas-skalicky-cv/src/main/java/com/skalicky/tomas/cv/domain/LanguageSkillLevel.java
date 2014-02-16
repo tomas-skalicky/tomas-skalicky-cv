@@ -7,7 +7,8 @@ import org.hibernate.validator.constraints.NotBlank;
  */
 public enum LanguageSkillLevel {
 
-    MOTHER_TONGUE("motherTongue"), ADVANCED("advanced"), BASICS("basics");
+    NATIVE_SPEAKER("nativeSpeaker"), ADVANCED("advanced"), UPPER_INTERMEDIATE("upperIntermediate"), BASICS(
+            "basics");
 
     private static final String LOCALIZATION_KEY_PREFIX = "language.skillLevel.";
 
