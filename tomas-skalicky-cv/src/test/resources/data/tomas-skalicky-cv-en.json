@@ -1,0 +1,101 @@
+{
+    "person":{
+        "fullName":{
+            "prefix":"Mgr.",
+            "firstName":"Tomáš",
+            "lastName":"Skalický"
+        },
+        "address":{
+            "street":"Isarstr.",
+            "streetNumber":6,
+            "city":"Freising",
+            "postCode":{
+                "postCode":85356
+            }
+        },
+        "cellphone":{
+            "country":"GERMANY",
+            "numberWithoutAreaCode":17638655633
+        },
+        "emailAddress":{
+            "emailAddress":"skalicky.tomas@gmail.com"
+        },
+        "birthday":"1986-03-21T00:00:00Z",
+        "personalWebSites":[
+            {
+                "webSiteUrl":"http://www.linkedin.com/in/tomasskalicky"
+            }
+        ]
+    },
+    "localization":"ENGLISH",
+    "summary":"I'm a software engineer",
+    "professionalExperience":[
+        {
+            "from":{
+                "@type":"NUMERIC_CV_DATE",
+                "date":"2013-05-01T00:00:00Z",
+                "showYear":"true",
+                "showMonth":"true",
+                "showDay":"false"
+            },
+            "to":{
+                "@type":"NUMERIC_CV_DATE",
+                "date":"2013-09-01T00:00:00Z",
+                "showYear":"true",
+                "showMonth":"true",
+                "showDay":"false"
+            },
+            "projectName":"Location Insights",
+            "position":"Software engineer",
+            "employer":"GfK SE",
+            "customer":"GfK",
+            "projectDescription":"Design and development of backend of a web application which consists of a map, where you can select a polygon and then you get socio-demographics data (e.g. an average age and income of people between 20  and 40) about people, who were at a certain point of time in the selected area. The raw data for analytics come from an USA carrier and from the Federal Statistical Office.\nProject started in 2012 and the version 1.0 is to be released in June 2013.",
+            "responsibilities":"Development of Map-Reduce Jobs whose results are used by statisticians.",
+            "usedTechnologies":[
+                "JDK 6",
+                "Hadoop",
+                "HDFS",
+                "Pig",
+                "JUnit 4",
+                "Maven 3",
+                "Bash",
+                "Git"
+            ],
+            "notes":""
+        }
+    ],
+    "academicWorks":{
+        
+    },
+    "competencies":[
+        
+    ],
+    "studies":[
+        
+    ],
+    "languageSkills":[
+        {
+            "language":"CZECH",
+            "level":"NATIVE_SPEAKER"
+        },
+        {
+            "language":"ENGLISH",
+            "level":"UPPER_INTERMEDIATE"
+        },
+        {
+            "language":"GERMAN",
+            "level":"ADVANCED",
+            "notes":"B2 certificate passed 02/2013"
+        },
+        {
+            "language":"FRENCH",
+            "level":"BASICS"
+        }
+    ],
+    "otherSkillsAndKnowledge":{
+        
+    },
+    "interests":[
+        
+    ]
+}
