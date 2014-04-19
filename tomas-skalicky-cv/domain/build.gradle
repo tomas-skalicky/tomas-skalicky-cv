@@ -1,0 +1,14 @@
+dependencies {
+
+	compile project(':util')
+	testCompile project(':globalconfiguration')
+
+	// Validator
+	compile( libraries.hibernate_validator )
+	
+	// Jackson
+	compile( libraries.jackson_mapper_asl )
+	
+	// Commons
+	compile( libraries.commons_lang )
+}

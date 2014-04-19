@@ -1,0 +1,35 @@
+buildscript {
+	repositories {
+		maven { url 'http://repo.spring.io/libs-snapshot' }
+		mavenLocal()
+	}
+	dependencies {
+		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC1')
+	}
+}
+
+apply plugin: 'spring-boot'
+
+jar {
+	baseName = 'tomas-skalicky-cv'
+	version =  '0.1.0'
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	manifest { attributes('Implementation-Title': 'CV of Tomas Skalicky', 'Implementation-Version': version, 'Main-Class': 'com.skalicky.tomas.cv.bootstrap.Application')}
+}
+
+dependencies {
+
+	compile project(':presentationlayer')
+	compile project(':businesslogic')
+	compile project(':persistencelayer')
+	compile project(':util')
+	compile project(':domain')
+	compile project(':globalconfiguration')
+
+	// Spring
+	compile( libraries.spring_boot_starter_web )
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.11'
+}

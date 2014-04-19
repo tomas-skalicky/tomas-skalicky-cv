@@ -1,0 +1,8 @@
+dependencies {
+
+	// Validator
+	compile( libraries.hibernate_validator )
+	
+	// Jackson
+	compile( libraries.jackson_mapper_asl )
+}
