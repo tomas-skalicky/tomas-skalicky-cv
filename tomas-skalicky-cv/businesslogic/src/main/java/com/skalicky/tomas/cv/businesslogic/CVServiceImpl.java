@@ -34,6 +34,7 @@ public class CVServiceImpl implements CVService {
 
     @Override
     public CV getCV(Language localization) {
+        logger.info(localization);
         try {
             CV readCV = jsonReader.read(getCVResource(localization), CV.class);
             Postconditions.isValid(readCV, ValidatorFactory.getValidator());
@@ -47,6 +48,7 @@ public class CVServiceImpl implements CVService {
     private InputStream getCVResource(Language localization) throws IOException {
         String jsonResourceString = "classpath:" + FOLDER_WITH_CVS_RELATIVE_PATH + File.separator
                 + getCVJsonFileName(localization);
+        logger.info(jsonResourceString);
         Resource jsonResource = applicationContext.getResource(jsonResourceString);
         return jsonResource.getInputStream();
     }

@@ -12,7 +12,7 @@ import com.skalicky.tomas.cv.domain.CV;
 import com.skalicky.tomas.cv.domain.Language;
 
 @RestController
-@RequestMapping(method = RequestMethod.GET)
+@RequestMapping(value = "", method = RequestMethod.GET)
 public class CVController {
 
     @Inject

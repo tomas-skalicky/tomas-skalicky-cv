@@ -12,6 +12,7 @@ target/
 # Gradle generated files and folders
 #####
 .gradle/
+test-output/
 
 
 
