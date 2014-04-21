@@ -7,9 +7,9 @@ subprojects {
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 	
-	group = com.skalicky
-	name = tomas-skalicky-cv
-	version = 0.1.0-SNAPSHOT
+	group = "com.skalicky"
+	name = "tomas-skalicky-cv"
+	version = "0.1.0-SNAPSHOT"
 	
 	repositories {
 	    mavenCentral()
